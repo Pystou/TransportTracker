@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Добавить транспорт</title>
+  <script defer src="/js/addTransport.js"></script>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+<h1>Добавление транспорта</h1>
+
+<div id="transportButtons">
+  <button data-type="bus">Автобус</button>
+  <button data-type="trolleybus">Троллейбус</button>
+  <button data-type="tram">Трамвай</button>
+</div>
+
+<div id="formSection" style="display:none;">
+  <label>
+    Номер маршрута:
+    <input type="text" id="transportNumber" />
+  </label>
+  <button id="loadStopsBtn">Загрузить остановки</button>
+</div>
+
+<div id="stopsSection" style="display:none;">
+  <h3>Остановки</h3>
+  <div id="direction0"><h4>Направление 0</h4></div>
+  <hr>
+  <div id="direction1"><h4>Направление 1</h4></div>
+</div>
+
+<div id="waitTimeSection" style="display:none;">
+  <h3 id="chosenStop"></h3>
+  <label>
+    Через сколько минут транспорт прибудет:
+    <input type="number" id="waitTime" min="1" /> мин.
+  </label>
+  <button id="submitBtn">Добавить транспорт</button>
+</div>
+
+<button id="cancelBtn">Отмена</button>
+</body>
+</html>
